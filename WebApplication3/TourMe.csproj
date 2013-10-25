@@ -1,0 +1,516 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A1F63366-04C7-4F25-AD50-BAEB12362C40}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ClassLibrary2</RootNamespace>
+    <AssemblyName>TourMe</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MSCaptcha, Version=4.0.4250.31585, Culture=neutral, PublicKeyToken=b9ff12f28cdcf412, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\MSCaptcha.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\Database1.mdf" />
+    <Content Include="App_Data\Database1_log.ldf">
+      <DependentUpon>Database1.mdf</DependentUpon>
+    </Content>
+    <Content Include="bin\ClassLibrary2.dll" />
+    <Content Include="bin\ClassLibrary2.pdb" />
+    <Content Include="bin\MSCaptcha.dll" />
+    <Content Include="bin\MSCaptcha.xml" />
+    <Content Include="Default\Default.aspx" />
+    <Content Include="Error.aspx" />
+    <Content Include="Excursiones\CrearExcursion.aspx" />
+    <Content Include="Excursiones\Excursion.aspx" />
+    <Content Include="Excursiones\Excursiones.aspx" />
+    <Content Include="Excursiones\ModificarEx.aspx" />
+    <Content Include="images\ActiveMenuButton.png" />
+    <Content Include="images\ActiveMenuButtonAnchor.png" />
+    <Content Include="images\ArticleCenter.png" />
+    <Content Include="images\ArticleCorners.png" />
+    <Content Include="images\ArticleHorizontal.png" />
+    <Content Include="images\ArticleVertical.png" />
+    <Content Include="images\BackgroundGradient.png" />
+    <Content Include="images\BlockCenter.png" />
+    <Content Include="images\BlockContentBorderCenter.png" />
+    <Content Include="images\BlockContentBorderCorners.png" />
+    <Content Include="images\BlockContentBorderHorizontal.png" />
+    <Content Include="images\BlockContentBorderVertical.png" />
+    <Content Include="images\BlockCorners.png" />
+    <Content Include="images\BlockHeader.png" />
+    <Content Include="images\BlockHeaderAnchor.png" />
+    <Content Include="images\BlockHorizontal.png" />
+    <Content Include="images\BlockVertical.png" />
+    <Content Include="images\BorderCenter.png" />
+    <Content Include="images\BorderCorners.png" />
+    <Content Include="images\BorderHorizontal.png" />
+    <Content Include="images\BorderVertical.png" />
+    <Content Include="images\Button.png" />
+    <Content Include="images\ButtonAnchor.png" />
+    <Content Include="images\Excrusion\exc1.jpg" />
+    <Content Include="images\Excrusion\exc2.jpg" />
+    <Content Include="images\Excrusion\exc3.jpg" />
+    <Content Include="images\rutadelascaras.jpg" />
+    <Content Include="images\sierramartes.jpg" />
+    <Content Include="images\Footer.png" />
+    <Content Include="images\Header.png" />
+    <Content Include="images\MenuBar.png" />
+    <Content Include="images\MenuButton.png" />
+    <Content Include="images\MenuButtonAnchor.png" />
+    <Content Include="images\modEx.bmp" />
+    <Content Include="images\perfil.jpg" />
+    <Content Include="images\rutaAr.jpg" />
+    <Content Include="images\rutPny.jpg" />
+    <Content Include="images\search-button.jpg" />
+    <Content Include="images\senderismo.jpg" />
+    <Content Include="images\Tienda\logo_carrito.png" />
+    <Content Include="images\Tienda\Lupa.png" />
+    <Content Include="images\Tienda\Productos\abrigo.jpg" />
+    <Content Include="images\Tienda\Productos\baston_trekking.jpg" />
+    <Content Include="images\Tienda\Productos\botas.jpg" />
+    <Content Include="images\Tienda\Productos\bota_trekking.jpg" />
+    <Content Include="images\Tienda\Productos\Calcetines_Diosaz_Raid100.jpg" />
+    <Content Include="images\Tienda\Productos\camiseta_senderistas.jpg" />
+    <Content Include="images\Tienda\Productos\camiseta_traveler.png" />
+    <Content Include="images\Tienda\Productos\cantimplora.jpg" />
+    <Content Include="images\Tienda\carrito.jpg" />
+    <Content Include="images\Tienda\lupa.jpg" />
+    <Content Include="images\Tienda\carro_compra.jpg" />
+    <Content Include="images\Tienda\Productos\Guante_Forclaz_Wind.jpg" />
+    <Content Include="images\Tienda\Productos\mochila.jpg" />
+    <Content Include="images\Tienda\Productos\mochila2.jpg" />
+    <Content Include="images\Tienda\Productos\nevera.jpg" />
+    <Content Include="images\Tienda\Productos\palos.jpg" />
+    <Content Include="images\Tienda\Productos\pantalon-mountain.jpg" />
+    <Content Include="images\Tienda\Productos\pantalon2.jpg" />
+    <Content Include="images\Tienda\Productos\prismaticos.jpg" />
+    <Content Include="images\Tienda\Productos\Chaleco_Forclaz500.jpg" />
+    <Content Include="images\Tienda\Productos\Chaleco_Inuit100L.jpg" />
+    <Content Include="images\Tienda\Productos\Chaqueta_Arpenaz300L.jpg" />
+    <Content Include="images\Tienda\Productos\Chaqueta_Bionnassay_DownLight.jpg" />
+    <Content Include="images\Tienda\Productos\Chaqueta_Cortalluvia.jpg" />
+    <Content Include="images\Tienda\Productos\Chaqueta_Cortalluvia_Cremallera.jpg" />
+    <Content Include="images\Tienda\Productos\Chaqueta_Escape_Parka.jpg" />
+    <Content Include="images\Tienda\Productos\Chaqueta_Forclaz300M.jpg" />
+    <Content Include="images\Tienda\Productos\Chaqueta_Inuit150.jpg" />
+    <Content Include="images\Tienda\Productos\Chaqueta_Inuit200.jpg" />
+    <Content Include="images\Tienda\Productos\Forclaz400LHood.jpg" />
+    <Content Include="images\Tienda\Productos\Forclaz900Strech.jpg" />
+    <Content Include="images\Tienda\Productos\Polar_Forclaz200M.jpg" />
+    <Content Include="images\Tienda\Productos\Polar_Forclaz400Hood.jpg" />
+    <Content Include="images\Tienda\Productos\Polar_Forclaz50.jpg" />
+    <Content Include="images\Tienda\Productos\Softshell_Forclaz700.jpg" />
+    <Content Include="images\Tienda\Productos\Softshell_Forclaz700M.jpg" />
+    <Content Include="images\Tienda\Productos\AntideslizantesTurtles.jpg" />
+    <Content Include="images\Tienda\Productos\Bufanda_Forclaz.jpg" />
+    <Content Include="images\Tienda\Productos\Cordon_Plano.jpg" />
+    <Content Include="images\Tienda\Productos\Cordon_Redondo.jpg" />
+    <Content Include="images\Tienda\Productos\Desodorante.jpg" />
+    <Content Include="images\Tienda\Productos\Esclavina_Forclaz900.jpg" />
+    <Content Include="images\Tienda\Productos\Funda_Botas.jpg" />
+    <Content Include="images\Tienda\Productos\Polainas_Forclaz.jpg" />
+    <Content Include="images\Tienda\Productos\Polainas_Forclaz_Trek.jpg" />
+    <Content Include="images\Tienda\Productos\Poncho_Chubasquero.jpg" />
+    <Content Include="images\Tienda\Productos\Poncho_Forclaz100.jpg" />
+    <Content Include="images\Tienda\Productos\Reimpermeabilizante.jpg" />
+    <Content Include="images\Tienda\Productos\Baston_Arpenaz200.jpg" />
+    <Content Include="images\Tienda\Productos\Baston_Arpenaz300.jpg" />
+    <Content Include="images\Tienda\Productos\Baston_Forclaz300.jpg" />
+    <Content Include="images\Tienda\Productos\Baston_Forclaz500.jpg" />
+    <Content Include="images\Tienda\Productos\Baston_Forclaz500foto.jpg" />
+    <Content Include="images\Tienda\Productos\Baston_Forclaz500grip.jpg" />
+    <Content Include="images\Tienda\Productos\Baston_Forclaz500light.jpg" />
+    <Content Include="images\Tienda\Productos\Baston_Forclaz700.jpg" />
+    <Content Include="images\Tienda\Productos\Baston_Jr_Forclaz.jpg" />
+    <Content Include="images\Tienda\Productos\Baston_Jr_Forclaz2.jpg" />
+    <Content Include="images\Tienda\Productos\Baston_syncline.jpg" />
+    <Content Include="images\Tienda\Productos\Botas_GranbyWPL.jpg" />
+    <Content Include="images\Tienda\Productos\Botas_Jr_Forclaz50.jpg" />
+    <Content Include="images\Tienda\Productos\Botas_Jr_Forclaz500.jpg" />
+    <Content Include="images\Tienda\Productos\Botas_X-Over.jpg" />
+    <Content Include="images\Tienda\Productos\Calcetines_Arpenaz100.jpg" />
+    <Content Include="images\Tienda\Productos\Calcetines_Diosaz_Raid500.jpg" />
+    <Content Include="images\Tienda\Productos\Calcetines_Forclaz100.jpg" />
+    <Content Include="images\Tienda\Productos\Calzado_ArpenazFlexM.jpg" />
+    <Content Include="images\Tienda\Productos\Calzado_Arpenaz_Flex_Itd.jpg" />
+    <Content Include="images\Tienda\Productos\Calzado_Jr_Arpenaz50.jpg" />
+    <Content Include="images\Tienda\Productos\Calzado_Mantra_Pear.jpg" />
+    <Content Include="images\Tienda\Productos\Sandalias_Arpenaz200.jpg" />
+    <Content Include="images\Tienda\Productos\Sandalias_Arpenaz50.jpg" />
+    <Content Include="images\Tienda\Productos\Sandalias_Arpenaz50H.jpg" />
+    <Content Include="images\Tienda\Productos\Sandalias_Jr_Arpenaz600.jpg" />
+    <Content Include="images\Tienda\Productos\Sandalias_Jr_WAYTA_LACE.jpg" />
+    <Content Include="images\Tienda\Productos\Sandalias_Mayu.jpg" />
+    <Content Include="images\Tienda\Productos\Sandalias_STELLA_BLOOM.jpg" />
+    <Content Include="images\Tienda\Productos\Sandalias_WATERPRO.jpg" />
+    <Content Include="images\Tienda\Productos\Sandalias_WAYTA.jpg" />
+    <Content Include="images\Tienda\Productos\Zapatillas_EXIT2AERO.jpg" />
+    <Content Include="images\Tienda\Productos\Camisa_Arpenaz100.jpg" />
+    <Content Include="images\Tienda\Productos\Camiseta_FORCLAZ900.jpg" />
+    <Content Include="images\Tienda\Productos\Camiseta_TechFRESH100.jpg" />
+    <Content Include="images\Tienda\Productos\Camiseta_TechFRESH50.jpg" />
+    <Content Include="images\Tienda\Productos\Camiseta_TechFRESH900.jpg" />
+    <Content Include="images\Tienda\Productos\Camiseta_TechTIL100.jpg" />
+    <Content Include="images\Tienda\Productos\Camiseta_TechTIL100L.jpg" />
+    <Content Include="images\Tienda\Productos\Camiseta_TechWOOL.jpg" />
+    <Content Include="images\Tienda\Productos\Camiseta_TechWOOLM.jpg" />
+    <Content Include="images\Tienda\Productos\Camiseta_TechWOOL_Cremallera.jpg" />
+    <Content Include="images\Tienda\Productos\Polo_FORCLAZ900.jpg" />
+    <Content Include="images\Tienda\Productos\Polo_Tidal_Cove.jpg" />
+    <Content Include="images\Tienda\Productos\Bidon1L.jpg" />
+    <Content Include="images\Tienda\Productos\BidonBasic1Litro.jpg" />
+    <Content Include="images\Tienda\Productos\BidonLaken.jpg" />
+    <Content Include="images\Tienda\Productos\Bidon_Jr_estampado.jpg" />
+    <Content Include="images\Tienda\Productos\Bolsa_de_agua.jpg" />
+    <Content Include="images\Tienda\Productos\BotellaIsoterma.jpg" />
+    <Content Include="images\Tienda\Productos\CantimploraBetterBottle.jpg" />
+    <Content Include="images\Tienda\Productos\CantimploraPurificadora.jpg" />
+    <Content Include="images\Tienda\Productos\FundaIsoterma.jpg" />
+    <Content Include="images\Tienda\Productos\TazaMug40.jpg" />
+    <Content Include="images\Tienda\Productos\TazaMugIsotermica.jpg" />
+    <Content Include="images\Tienda\Productos\Gorra_Arpenaz100.jpg" />
+    <Content Include="images\Tienda\Productos\Gorra_Forclaz100.jpg" />
+    <Content Include="images\Tienda\Productos\Gorro_Arpenaz100.jpg" />
+    <Content Include="images\Tienda\Productos\Gorro_Jr_Forclaz20.jpg" />
+    <Content Include="images\Tienda\Productos\Sombrero_Forclaz100.jpg" />
+    <Content Include="images\Tienda\Productos\Sombrero_Forclaz_Impermeable.jpg" />
+    <Content Include="images\Tienda\Productos\Guantes_Forclaz_Wind.jpg" />
+    <Content Include="images\Tienda\Productos\Guante_Forclaz20.jpg" />
+    <Content Include="images\Tienda\Productos\Guante_Forclaz30.jpg" />
+    <Content Include="images\Tienda\Productos\Guante_Forclaz500.jpg" />
+    <Content Include="images\Tienda\Productos\Guante_Forclaz_Mitones.jpg" />
+    <Content Include="images\Tienda\Productos\Guante_Forclaz_Seda.jpg" />
+    <Content Include="images\Tienda\Productos\Mochila_Abertura_Rapida.jpg" />
+    <Content Include="images\Tienda\Productos\Mochila_AC_zero25.jpg" />
+    <Content Include="images\Tienda\Productos\Mochila_Arpenaz18.jpg" />
+    <Content Include="images\Tienda\Productos\Mochila_Arpenaz20XC.jpg" />
+    <Content Include="images\Tienda\Productos\Mochila_Arpenaz25Air.jpg" />
+    <Content Include="images\Tienda\Productos\Mochila_Forclaz30Air.jpg" />
+    <Content Include="images\Tienda\Productos\Mochila_Forclaz30AirLluvia.jpg" />
+    <Content Include="images\Tienda\Productos\Mochila_Forclaz40Air.jpg" />
+    <Content Include="images\Tienda\Productos\Mochila_Iliader60L.jpg" />
+    <Content Include="images\Tienda\Productos\Mochila_Jr_Arpenaz10.jpg" />
+    <Content Include="images\Tienda\Productos\Mochila_Jr_Forclaz22Air.jpg" />
+    <Content Include="images\Tienda\Productos\Mochila_Trail5L.jpg" />
+    <Content Include="images\Tienda\Productos\Portabebes_kid.jpg" />
+    <Content Include="images\Tienda\Productos\Rinonera_Arpenaz5WB.jpg" />
+    <Content Include="images\Tienda\Productos\Corsario_Arpenaz100.jpg" />
+    <Content Include="images\Tienda\Productos\Falda-Pantalon_Arpenaz100L.jpg" />
+    <Content Include="images\Tienda\Productos\Falda-Pantalon_Arpenaz400L.jpg" />
+    <Content Include="images\Tienda\Productos\Falda-Pantalon_Forclaz100.jpg" />
+    <Content Include="images\Tienda\Productos\Pantalon_Arpenaz100Largo.jpg" />
+    <Content Include="images\Tienda\Productos\Pantalon_Ascent.jpg" />
+    <Content Include="images\Tienda\Productos\Pantalon_Chubasquero.jpg" />
+    <Content Include="images\Tienda\Productos\Pantalon_escape500.jpg" />
+    <Content Include="images\Tienda\Productos\Pantalon_Forclaz100Largo.jpg" />
+    <Content Include="images\Tienda\Productos\Pantalon_Forclaz900Largo.jpg" />
+    <Content Include="images\Tienda\Productos\Pantalon_Ridge_Cargo.jpg" />
+    <Content Include="images\Tienda\Productos\Short_Arpenaz100.jpg" />
+    <Content Include="images\Tienda\Productos\Short_Forclaz900.jpg" />
+    <Content Include="images\Tienda\Productos\TiendaT2.jpg" />
+    <Content Include="images\Tienda\Productos\Tienda_Bedrock.jpg" />
+    <Content Include="images\Tienda\Productos\Tienda_Lightent.jpg" />
+    <Content Include="images\Tienda\Productos\Tienda_Mutha.jpg" />
+    <Content Include="images\Tienda\Productos\Tienda_QuickHiker.jpg" />
+    <Content Include="images\Tienda\Productos\Tienda_SECONDS.jpg" />
+    <Content Include="images\Tienda\Productos\Tienda_T3.jpg" />
+    <Content Include="images\Tienda\Productos\Tienda_T3_ultralight.jpg" />
+    <Content Include="images\Tienda\Productos\Tienda_T4_ultralight.jpg" />
+    <Content Include="images\Tienda\Productos\reloj.jpg" />
+    <Content Include="images\Tienda\Productos\tienda.jpg" />
+    <Content Include="images\TourME.png" />
+    <Content Include="index2.html" />
+    <Content Include="Perfil\EliminarUsuario.aspx" />
+    <Content Include="Perfil\ModPass.aspx" />
+    <Content Include="Perfil\ModPerfil.aspx" />
+    <Content Include="Perfil\PedidoUser.aspx" />
+    <Content Include="Perfil\PerfilUsuario.aspx" />
+    <Content Include="Perfil\Recuperacion.aspx" />
+    <Content Include="Default\Configuration.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Default\data.xml" />
+    <Content Include="Default\Fotos\slide1.jpg" />
+    <Content Include="Default\Fotos\slide2.jpg" />
+    <Content Include="Default\Fotos\slide3.jpg" />
+    <Content Include="Default\Fotos\slide4.jpg" />
+    <Content Include="PruebasIndex\index.aspx" />
+    <Content Include="Default\Silverlight.js" />
+    <Content Include="Default\SlideShow.js" />
+    <Content Include="Registro.aspx" />
+    <Content Include="style.css" />
+    <Content Include="Tienda\ArticuloDetallado.aspx" />
+    <Content Include="Tienda\Carrito.aspx" />
+    <Content Include="Tienda\Tienda.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Perfil\Perfil.aspx" />
+    <Content Include="About\About.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Default\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Error.aspx.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Error.aspx.designer.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Excursiones\CrearExcursion.aspx.cs">
+      <DependentUpon>CrearExcursion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Excursiones\CrearExcursion.aspx.designer.cs">
+      <DependentUpon>CrearExcursion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Excursiones\Excursion.aspx.cs">
+      <DependentUpon>Excursion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Excursiones\Excursion.aspx.designer.cs">
+      <DependentUpon>Excursion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Excursiones\Excursiones.aspx.cs">
+      <DependentUpon>Excursiones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Excursiones\Excursiones.aspx.designer.cs">
+      <DependentUpon>Excursiones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Excursiones\ModificarEx.aspx.cs">
+      <DependentUpon>ModificarEx.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Excursiones\ModificarEx.aspx.designer.cs">
+      <DependentUpon>ModificarEx.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage.master.cs">
+      <DependentUpon>MasterPage.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Perfil\EliminarUsuario.aspx.cs">
+      <DependentUpon>EliminarUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Perfil\EliminarUsuario.aspx.designer.cs">
+      <DependentUpon>EliminarUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Perfil\ModPass.aspx.cs">
+      <DependentUpon>ModPass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Perfil\ModPass.aspx.designer.cs">
+      <DependentUpon>ModPass.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Perfil\ModPerfil.aspx.cs">
+      <DependentUpon>ModPerfil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Perfil\ModPerfil.aspx.designer.cs">
+      <DependentUpon>ModPerfil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Perfil\PedidoUser.aspx.cs">
+      <DependentUpon>PedidoUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Perfil\PedidoUser.aspx.designer.cs">
+      <DependentUpon>PedidoUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Perfil\PerfilUsuario.aspx.cs">
+      <DependentUpon>PerfilUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Perfil\PerfilUsuario.aspx.designer.cs">
+      <DependentUpon>PerfilUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Perfil\Recuperacion.aspx.cs">
+      <DependentUpon>Recuperacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Perfil\Recuperacion.aspx.designer.cs">
+      <DependentUpon>Recuperacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Default\Configuration.xml.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default\Configuration.xml.designer.cs">
+      <DependentUpon>Configuration.xml.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Default\data.xml.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default\data.xml.designer.cs">
+      <DependentUpon>data.xml.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="PruebasIndex\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PruebasIndex\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Registro.aspx.cs">
+      <DependentUpon>Registro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registro.aspx.designer.cs">
+      <DependentUpon>Registro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Perfil\Perfil.aspx.cs">
+      <DependentUpon>Perfil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Perfil\Perfil.aspx.designer.cs">
+      <DependentUpon>Perfil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="About\About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About\About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tienda\ArticuloDetallado.aspx.cs">
+      <DependentUpon>ArticuloDetallado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tienda\ArticuloDetallado.aspx.designer.cs">
+      <DependentUpon>ArticuloDetallado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tienda\Carrito.aspx.cs">
+      <DependentUpon>Carrito.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tienda\Carrito.aspx.designer.cs">
+      <DependentUpon>Carrito.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tienda\Tienda.aspx.cs">
+      <DependentUpon>Tienda.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tienda\Tienda.aspx.designer.cs">
+      <DependentUpon>Tienda.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\Thumbs.db" />
+    <Content Include="MasterPage.master" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Buscar\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibrary2\Clases.csproj">
+      <Project>{989FE69A-15BA-40C2-AC1B-3FDE105FFC46}</Project>
+      <Name>Clases</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>54094</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,27 @@
+﻿<data transition="CrossFadeTransition">
+  <album
+		title="Nuestras Excursiones"
+		description=""
+		image="../Images/ActiveMenuButtonAnchor.png">
+    <slide
+			title="Fuentes del Algar"
+			description="Fabuloso rio"
+			image="./Fotos/slide1.jpg"
+			thumbnail="./Fotos/slide1.jpg" />
+    <slide
+      title="Mar Menor"
+      description="Canoas, agua y sol"
+      image="./Fotos/slide2.jpg"
+      thumbnail="./Fotos/slide2.jpg" />
+    <slide
+      title="Camino Rural Tibi"
+      description="BiciRuta por TIBI"
+      image="./Fotos/slide3.jpg"
+      thumbnail="./Fotos/slide3.jpg" />
+    <slide
+      title="Serra Mariola"
+      description="Excursión por la Sierra"
+      image="./Fotos/slide4.jpg"
+      thumbnail="./Fotos/slide4.jpg" />
+  </album>
+</data>

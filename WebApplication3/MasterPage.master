@@ -1,0 +1,48 @@
+<%@ Master Language="C#" CodeFile="MasterPage.master.cs" Inherits="MasterPage" EnableViewState="false" %><!DOCTYPE html>
+<html>
+<head runat="server">
+    <title>TourMe</title>
+    <link rel="stylesheet" href="style.css" />
+    <asp:ContentPlaceHolder id="Head" runat="server" />
+    <style type="text/css">
+        .style1
+        {
+            width: 328px;
+            height: 139px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="BackgroundGradient"> </div>
+    <div class="BodyContent">
+
+    <div class="BorderBorder"><div class="BorderBL"><div></div></div><div class="BorderBR"><div></div></div><div class="BorderTL"></div><div class="BorderTR"><div></div></div><div class="BorderT"></div><div class="BorderR"><div></div></div><div class="BorderB"><div></div></div><div class="BorderL"></div><div class="BorderC"></div><div class="Border">
+
+        <div class="Menu">
+             <ul><%= RenderMenu() %></ul>
+        </div><div class="Header">
+          <div class="HeaderTitle">
+              <asp:Panel ID="Panel1" runat="server" Height="45px">
+                  <img alt="TourME" class="style1" 
+    src="../images/TourME.png" />
+              </asp:Panel>
+          </div>
+        </div><div class="Columns"><div class="MainColumn">
+        <div class="ArticleBorder"><div class="ArticleBL"><div></div></div><div class="ArticleBR"><div></div></div><div class="ArticleTL"></div><div class="ArticleTR"><div></div></div><div class="ArticleT"></div><div class="ArticleR"><div></div></div><div class="ArticleB"><div></div></div><div class="ArticleL"></div><div class="ArticleC"></div><div class="Article">
+
+            <asp:ContentPlaceHolder id="Content" runat="server" />
+
+        </div></div></div></div>
+        <div class="Footer">
+            <asp:ContentPlaceHolder id="Footer" runat="server" />
+            <asp:HyperLink ID="HyperLink1" runat="server" 
+                NavigateUrl="mailto:tourme@gmail.com">Contacta</asp:HyperLink>
+&nbsp;</div>                
+
+    </div></div>
+    </div>
+    <asp:ContentPlaceHolder id="AfterBody" runat="server" />
+    </form>
+</body>
+</html>
